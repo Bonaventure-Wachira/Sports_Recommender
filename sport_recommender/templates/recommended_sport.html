@@ -1,0 +1,14 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>Sports Recommendation Result</title>
+</head>
+<body>
+    <h1>Recommended Sport</h1>
+    <p>We recommend <strong>{{ recommended_sport }}</strong> as the ideal sport for you!</p>
+    <a href="{% url 'input_form' %}">Try again</a>
+</body>
+</html>

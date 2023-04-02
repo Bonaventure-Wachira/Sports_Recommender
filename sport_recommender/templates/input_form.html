@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>Sports Recommendation</title>
+</head>
+<body>
+    <h1>Welcome to the Sports Recommendation Site</h1>
+    <p>Please input values between 0 and 10 for each attribute:</p>
+    <form action="{% url 'recommended_sport' %}" method="post">
+        {% csrf_token %}
+        <table>
+            {% for attribute, description in attribute_descriptions %}
+            <tr>
+                <td><label for="{{ attribute }}">{{ attribute }}:</label></td>
+                <td><input type="number" name="{{ attribute }}" min="0" max="10" step="0.01" required></td>
+                <td><span class="description">{{ description }}</span></td>
+            </tr>
+            {% endfor %}
+        </table>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
