@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-kdsm^t*r%9c1=mpqr&ego*kw9mrc99s5s=#b8s*@^xuzbynuc2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['sportfinder.azurewebsites.net']
 
 
 # Application definition
