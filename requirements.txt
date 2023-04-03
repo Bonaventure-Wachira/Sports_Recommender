@@ -1,6 +1,5 @@
 asgiref==3.6.0
 Django==4.1.7
-Flask==2.0.2
 gunicorn==20.1.0
 itsdangerous==2.0.1
 Jinja2==3.0.2
