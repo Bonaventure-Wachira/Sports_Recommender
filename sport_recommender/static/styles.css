@@ -68,3 +68,27 @@ input[type="submit"]:hover {
     color: #95a5a6;
     padding-left: 8px;
 }
+
+
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.button {
+    display: inline-block;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    background-color: #3498db;
+    color: #ecf0f1;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #2980b9;
+}

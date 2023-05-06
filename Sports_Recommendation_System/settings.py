@@ -25,9 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-kdsm^t*r%9c1=mpqr&ego*kw9mrc99s5s=#b8s*@^xuzbynuc2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['sportfinder.azurewebsites.net']
+ALLOWED_HOSTS = ['sportfinder.azurewebsites.net', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # Add this line
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -52,6 +53,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
 
 ROOT_URLCONF = 'Sports_Recommendation_System.urls'
 
@@ -132,6 +134,9 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [Path(__file__).resolve(strict=True).parent.parent / 'sport_recommender/static']
 
 
+# Whitenoise configuration
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')

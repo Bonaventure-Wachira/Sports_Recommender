@@ -9,6 +9,8 @@
 <body>
     <h1>Recommended Sport</h1>
     <p>We recommend <strong>{{ recommended_sport }}</strong> as the ideal sport for you!</p>
-    <a href="{% url 'input_form' %}">Try again</a>
+    <div class="button-container">
+        <a class="button" href="{% url 'input_form' %}">Try again</a>
+    </div>
 </body>
 </html>
